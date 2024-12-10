@@ -5,7 +5,29 @@ title: "About"
 About this site
 
 ```{r}
-1 + 1
+library(ggplot2)
+library(dplyr)
+library(forcats)
+
+# Using median
+mpg %>%
+  mutate(class = fct_reorder(class, hwy, .fun='median')) %>%
+  ggplot( aes(x=reorder(class, hwy), y=hwy, fill=class)) + 
+    geom_boxplot() +
+    xlab("class") +
+    theme(legend.position="none") +
+    xlab("")
+ 
+# Using number of observation per group
+mpg %>%
+  mutate(class = fct_reorder(class, hwy, .fun='length' )) %>%
+  ggplot( aes(x=class, y=hwy, fill=class)) + 
+    geom_boxplot() +
+    xlab("class") +
+    theme(legend.position="none") +
+    xlab("") +
+    xlab("")
+
 ```
 
 its working fine from quarto publish
