@@ -11,6 +11,6 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\nits working fine from quarto publish"
+    "text": "About this site\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(forcats)\n\n# Using median\nmpg %&gt;%\n  mutate(class = fct_reorder(class, hwy, .fun='median')) %&gt;%\n  ggplot( aes(x=reorder(class, hwy), y=hwy, fill=class)) + \n    geom_boxplot() +\n    xlab(\"class\") +\n    theme(legend.position=\"none\") +\n    xlab(\"\")\n\n\n\n\n\n\n\n# Using number of observation per group\nmpg %&gt;%\n  mutate(class = fct_reorder(class, hwy, .fun='length' )) %&gt;%\n  ggplot( aes(x=class, y=hwy, fill=class)) + \n    geom_boxplot() +\n    xlab(\"class\") +\n    theme(legend.position=\"none\") +\n    xlab(\"\") +\n    xlab(\"\")\n\n\n\n\n\n\n\n\nits working fine from quarto publish"
   }
 ]
