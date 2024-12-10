@@ -8,6 +8,7 @@ About this site
 library(ggplot2)
 library(dplyr)
 library(forcats)
+library(ggridges)
 
 # Using median
 mpg %>%
