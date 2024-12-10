@@ -1,8 +1,16 @@
 {
+<<<<<<< Updated upstream
   "about.qmd": {
     "about.html": "c404c572"
   },
   "index.qmd": {
     "index.html": "2494c282"
+=======
+  "index.qmd": {
+    "index.html": "b1f54afe"
+  },
+  "about.qmd": {
+    "about.html": "71c503eb"
+>>>>>>> Stashed changes
   }
 }
