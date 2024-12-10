@@ -8,4 +8,4 @@ About this site
 1 + 1
 ```
 
-latest changes, with upload from github desktop
+its working fine from quarto publish
