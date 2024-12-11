@@ -1,1 +1,1 @@
-Sitemap: https://kulbhushanchand.github.io/kb-website/sitemap.xml
+Sitemap: kulbhushanchand.github.io/classes/sitemap.xml
